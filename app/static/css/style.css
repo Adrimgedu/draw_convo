@@ -1,75 +1,113 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+a {
+    color: #0085a1;
+    text-decoration: none;
+}
+
+/* Header Styles */
 .header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .header h1 {
-  margin: 0;
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
-.subheader {
-  color: #ccc;
+.header .subheader {
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
+/* Call to Action Section */
+.call-to-action {
+    background: #0085a1;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.call-to-action p {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+/* Form Styles */
 .upload-form {
-  margin-top: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.input-group {
+    margin-bottom: 20px;
 }
 
 .filupp {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #555;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-}
-
-.filupp:hover {
-  background-color: #666;
+    display: block;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .filupp input[type="file"] {
-  display: none;
+    display: none;
 }
 
 .filupp-file-name {
-  margin-left: 10px;
+    display: inline-block;
+    margin-top: 5px;
 }
 
-input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  }
-  
-  input[type="submit"]:hover {
-  background-color: #218838;
-  }
-  
-  input[type="text"] {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: -20px;
-  margin-left: 10px;
-  width: calc(100% - 22px); /* Adjust width as per padding and border */
-  }
-  
-  input[type="text"]:focus {
-  outline: none;
-  border-color: #999;
-  }
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media-links {
+    margin-top: 10px;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .call-to-action p {
+        font-size: 1.2em;
+    }
+
+    .upload-form {
+        margin: 20px;
+    }
+}
