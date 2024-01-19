@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pretty Convo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='static/css/style.css') }}">
+    <!-- Include FontAwesome and Google Fonts here -->
+</head>
+<body>
+    <div class="header">
+        <h1>Pretty Football summon</h1>
+        <p class="subheader">A project by Adrián Muñoz</p>
+    </div>
+    
+    <div class="call-to-action">
+        <p>This is a simple web application to paint a nice call for 18 football players based on a template image</p>
+    </div>
+
+    <form action="/uploader" method="POST" enctype="multipart/form-data" class="upload-form">
+        <div class="input-group">
+            <label for="excel-file-upload" class="filupp">
+                <span class="filupp-file-name js-value">Upload Excel File</span>
+                <input type="file" name="excel" id="excel-file-upload" accept=".xlsx" onchange="updateFileName(this)"/>
+                <span id="excel-file-name"></span>
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label for="template-file-upload" class="filupp">
+                <span class="filupp-file-name js-value">Upload Template Image</span>
+                <input type="file" name="template" id="template-file-upload" accept=".png,.jpeg" onchange="updateFileName(this)"/>
+                <span id="template-file-name"></span>
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label for="output-path" class="filupp">
+                <span class="filupp-file-name js-value">Enter Output Path</span>
+                <input type="text" name="output_path" id="output-path" placeholder="e.g., output.png"/>
+            </label>
+        </div>
+
+        <input type="submit" value="Generate Image"/>
+    </form>
+
+    <footer>
+        <p>Contact me at: mailto:adrian.munnoz.garcia@gmail.com </p>
+        <div class="social-media-links">
+            <!-- FontAwesome Icons for social media here -->
+        </div>
+    </footer>
+
+    <script>
+        function updateFileName(input) {
+            var fileNameSpan = input.nextElementSibling;
+            fileNameSpan.textContent = input.files.length + ' file(s) selected';
+        }
+    </script>
+</body>
+</html>
