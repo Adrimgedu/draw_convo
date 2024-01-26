@@ -140,3 +140,18 @@ footer {
         flex-direction: column;
     }
 }
+
+.instructions-section, .final-image-example {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.instructions-section h2, .final-image-example h2 {
+    margin-top: 0;
+}
+
+ol {
+    padding-left: 20px;
+}

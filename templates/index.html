@@ -11,7 +11,25 @@
         <h1>Team Selection App</h1>
         <p>Welcome to the Player Selection Application. A project made by Adrián Muñoz</p>
     </header>
-
+    <!-- Instructions and Downloads Section -->
+<div class="instructions-section">
+    <h2>Instructions</h2>
+    <p>Follow these steps to create your customized football call-up image:</p>
+    <ol>
+        <li>Download the example player list and image template.</li>
+        <li>Fill out the player list with the names and numbers of your players.</li>
+        <li>Drag and drop the player names into the desired position in the web interface.</li>
+        <li>Upload your filled-out list and your template image.</li>
+        <li>Click "Generate Image" to receive your customized call-up image.</li>
+    </ol>
+    <p><a href="{{ url_for('static/example', filename='lista_senior.xlsx') }}" download>Download Example List</a></p>
+    <p><a href="{{ url_for('static/example', filename='template.jpeg') }}" download>Download Image Template</a></p>
+</div>
+<!-- Example of the Final Image -->
+<div class="final-image-example">
+    <h2>Example of the Final Image</h2>
+    <img src="{{ url_for('static/example', filename='final_output.jpeg') }}" alt="Example of the final image" style="max-width: 100%; height: auto;">
+</div>
     <!-- Upload Sections Combined -->
     <div class="upload-sections">
         <div>
